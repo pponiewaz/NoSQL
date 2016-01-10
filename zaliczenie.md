@@ -1,9 +1,3 @@
-#### Bazy danych wykorzystane w zadaniu
-MongoDB - wersja 3.0.7  
-PostgreSQL - wersja 9.4.5
-
------
-
 #### Zadanie 2a. Zaimportować, do systemów baz danych:
  Zaimportowana baza reddita - [RC_2015_01](https://www.reddit.com/r/datasets/comments/3bxlg7/i_have_every_publicly_available_reddit_comment).
 #### Zadanie 2b. Zliczyć liczbę zaimportowanych rekordów.
