@@ -13,7 +13,9 @@ Informacje o komputerze na którym były wykonywane obliczenia:
 
 |    |   |
 |----|---|
-| System | Windows 8.1 Professional |
+| System | Windows 8.1 Professional 64 bit |
 | Processor | AMD Athlon II X64 645 Processor 3.11 GHz  |
 | Ram | 8 GB  |
-| Dysk twardy | Seagate ST500DM002  |
+| Dysk twardy | Seagate ST500DM002 HDD |
+| MongoDB | wersja 3.0.7 |
+| PostgreSQL | wersja 9.4.5 |
