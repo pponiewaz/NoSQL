@@ -26,10 +26,10 @@ Do importu bazy w PostgreSQL wykorzystalem zewnetrzny program [Pgfutter](https:/
 -----
 
 #### Wykresy przedstawiajace prace podzespolow komputera podczas eksploratacji danych
-MongoDB
+MongoDB  
 ![mongodb-wykres](mongo_wykres.png)
 
-PostgreSQL
+PostgreSQL  
 ![psql-wykres](psql_wykres.png)
 
 -----
