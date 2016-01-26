@@ -44,4 +44,5 @@ PostgreSQL
 
 Dane potrzebne do tego zadania wygenerowalem za pomoca strony [geojson.io](http://geojson.io/)
 
-Import wykonany za pomoca polecenia: `mongoimport -d polska -c miasta miasta.geojson`
+Import wykonany za pomoca polecenia: `mongoimport -d polska -c miasta miasta.geojson`  
+[geojson](map.geojson)
