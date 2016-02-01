@@ -47,30 +47,38 @@ Dane potrzebne do tego zadania wygenerowalem za pomoca strony [geojson.io](http:
 Import wykonany za pomoca polecenia: `mongoimport -d city -c city miasta.geojson`  
 
 Wyszukanie mojego rodzinnego miasta:  
-`db.city.find({"name": "Olsztyn"})`  
-`{ "_id" : 763166, "name" : "Olsztyn", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.49416, 53.779949 ] } }`  
-
+```javascript
+db.city.find({"name": "Olsztyn"})
+{ "_id" : 763166, "name" : "Olsztyn", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.49416, 53.779949 ] } }
+```
 [geojson1](1.geojson)
 
-Wyszukanie miejscowoci w odleglosci 10km wokol Olsztyna:  
-`db.city.find({loc: {$near: {$geometry: {type: "Point", coordinates: [ 20.49416, 53.779949 ]}, $maxDistance: 10000}}},{_id:0, name: 1}).skip(1)`  
-Wynik:   
-`{ "_id" : 766303, "name" : "Likusy", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.4345, 53.795681
-] } }`  
-``{ "_id" : 772768, "name" : "Dywity", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.47817, 53.837589
- ] } }`    
-`{ "_id" : 6619358, "name" : "Powiat olsztyński", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.5664
-1, 53.729221 ] } }``  
+Wyszukanie miejscowoci w odleglosci 10km wokol Olsztyna: 
+```javascript
+db.city.find({loc: {$near: {$geometry: {type: "Point", coordinates: [ 20.49416, 53.779949 ]}, $maxDistance: 10000}}},{_id:0, name: 1}).skip(1)
+```
+Wynik:
+```javascript
+{ "_id" : 766303, "name" : "Likusy", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.4345, 53.795681
+] } }  
+{ "_id" : 772768, "name" : "Dywity", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.47817, 53.837589
+ ] } }    
+{ "_id" : 6619358, "name" : "Powiat olsztyński", "country" : "PL", "loc" : { "type" : "Point", "coordinates" : [ 20.5664
+1, 53.729221 ] } }
+```
 
 [geojson2](2.geojson)  
 
 Polygon:  
- `> db.city.find( { loc: {$geoWithin : { $geometry: {type : "Polygon", coordinates: [ [[20.387,53.818], [22.566,51.0], [23.387,51.818], [20.387,53.818]] ]}}}},{_id:0, name:1} ).limit(5)`  
-Wynik:  
-`{ "name" : "Stoczek Lukowski" }
+```javascript
+> db.city.find( { loc: {$geoWithin : { $geometry: {type : "Polygon", coordinates: [ [[20.387,53.818], [22.566,51.0], [23.387,51.818], [20.387,53.818]] ]}}}},{_id:0, name:1} ).limit(5)
+```
+Wynik:
+```javascript
+{ "name" : "Stoczek Lukowski" }
 { "name" : "Latowicz" }
 { "name" : "Chorzele" }
 { "name" : "Chorzele" }
-{ "name" : "Wielbark" }`  
-
+{ "name" : "Wielbark" }  
+```
 [geojson3](3.geojson)
